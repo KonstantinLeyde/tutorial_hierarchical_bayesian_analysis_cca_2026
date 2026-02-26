@@ -1,0 +1,38 @@
+\usetikzlibrary{
+  positioning, arrows.meta, fit,
+  decorations.pathreplacing, backgrounds, calc
+}
+
+
+% ── colour palette ────────────────────────────────────────────────────────────
+\definecolor{popclr}   {HTML}{6A4C93}
+\definecolor{hidclr}   {HTML}{2A9D8F}
+\definecolor{dataclr}  {HTML}{E76F51}
+\definecolor{ppclr}    {HTML}{F4A261}
+\definecolor{boxbg}    {HTML}{F8F9FA}
+\definecolor{arrowclr} {HTML}{444444}
+
+% ── helper styles ─────────────────────────────────────────────────────────────
+\tikzset{
+  mybox/.style={
+    draw=#1, fill=boxbg, rounded corners=4pt,
+    inner sep=6pt, line width=0.8pt
+  },
+  colhead/.style={font=\bfseries\small, text=#1},
+  arr/.style={-Stealth, thick, color=arrowclr,
+              shorten >=4pt, shorten <=4pt},
+  plotbox/.style={mybox=#1, minimum width=3.2cm, minimum height=2.6cm},
+  sublabel/.style={font=\footnotesize, text=#1},
+}
+
+
+
+% ── column x-positions ───────────────────────────────────────────────────────
+\newcommand{\colA}{0cm}
+\newcommand{\colB}{5.6cm}
+\newcommand{\colC}{11.2cm}
+
+% ── row y-positions (headers at 0, plots below, inference further below) ─────
+\newcommand{\rowHead}{0cm}
+\newcommand{\rowOne}{-1.4cm}
+\newcommand{\rowTwo}{-6.8cm}
